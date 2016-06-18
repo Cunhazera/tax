@@ -1,0 +1,9 @@
+machine:
+  java:
+    version: oraclejdk8
+dependencies:
+  override:
+  - mvn install
+test:
+  override:
+    - mvn integration-test
