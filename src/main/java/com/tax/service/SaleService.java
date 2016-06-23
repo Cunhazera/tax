@@ -12,7 +12,7 @@ import javax.persistence.PersistenceContext;
 import com.tax.entity.Product;
 import com.tax.entity.QSale;
 import com.tax.entity.Sale;
-import com.tax.entity.SaleProductEntity;
+import com.tax.entity.SaleProduct;
 import com.tax.operation.QueryObject;
 import com.tax.operation.ValidateObject;
 
@@ -31,7 +31,7 @@ public class SaleService {
 	private QSale qSale = QSale.sale;
 
 	public void insertSale(Sale sale) throws Exception {
-		SaleProductEntity saleItem = new SaleProductEntity();
+		SaleProduct saleItem = new SaleProduct();
 		saleItem.setProduct(manager.find(Product.class, sale.getProducts().get(0).getProduct().getId()));
 		sale.setProducts(asList(saleItem));
 		validator.validateObject(sale);

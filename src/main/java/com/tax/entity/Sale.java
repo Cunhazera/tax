@@ -34,7 +34,7 @@ public class Sale {
 	@NotNull(message = "Add products")
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "SALEPRODUCTENTITY_ID")
-	private List<SaleProductEntity> products;
+	private List<SaleProduct> products;
 
 	@NotNull(message = "Sale needs some value!")
 	private BigDecimal saleValue;

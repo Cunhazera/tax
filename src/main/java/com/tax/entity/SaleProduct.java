@@ -21,13 +21,12 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode
 @Data
 @Builder
-public class SaleProductEntity {
+public class SaleProduct {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long id;
 
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int quantity;
 
 	@Size(min = 1, message = "Insert the product, please")
