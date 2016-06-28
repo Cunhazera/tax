@@ -1,7 +1,6 @@
 package com.tax.service;
 
-import static java.util.Arrays.asList;
-
+import java.util.Arrays;
 import java.util.List;
 
 import javax.ejb.Stateless;
@@ -31,11 +30,12 @@ public class SaleService {
 	private QSale qSale = QSale.sale;
 
 	public void insertSale(Sale sale) throws Exception {
-		SaleProduct saleItem = new SaleProduct();
-		saleItem.setProduct(manager.find(Product.class, sale.getProducts().get(0).getProduct().getId()));
-		sale.setProducts(asList(saleItem));
-		validator.validateObject(sale);
-		query.save(sale);
+		Product product = manager.find(Product.class, 2L);
+		SaleProduct saleProduct = new SaleProduct();
+		saleProduct.setProduct(product);
+		sale.setProducts(Arrays.asList(saleProduct));
+		saleProduct.setSale(sale);
+		manager.persist(sale);
 	}
 
 	public List<Sale> listAllSales() {

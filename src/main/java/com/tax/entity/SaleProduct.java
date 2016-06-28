@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -29,8 +29,8 @@ public class SaleProduct {
 
 	private int quantity;
 
-	@Size(min = 1, message = "Insert the product, please")
-	@ManyToOne(fetch = FetchType.LAZY)
+	@NotNull(message = "Insert the product, please")
+	@ManyToOne(fetch = FetchType.EAGER)
 	private Product product;
 
 	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)

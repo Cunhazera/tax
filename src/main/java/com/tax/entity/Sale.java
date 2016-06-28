@@ -1,6 +1,5 @@
 package com.tax.entity;
 
-import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -17,7 +16,6 @@ import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Entity
@@ -31,13 +29,13 @@ public class Sale {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long id;
 
-	@NotNull(message = "Add products")
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinColumn(name = "SALEPRODUCTENTITY_ID")
+	@NotNull(message = "Sale product!")
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@JoinColumn(name = "SALE_ID")
 	private List<SaleProduct> products;
 
 	@NotNull(message = "Sale needs some value!")
-	private BigDecimal saleValue;
+	private int saleValue;
 
 	private Date creationDate = new Date();
 
