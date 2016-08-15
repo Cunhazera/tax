@@ -26,11 +26,11 @@ import lombok.NoArgsConstructor;
 public class Sale {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
 	@NotNull(message = "Sale product!")
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "SALE_ID")
 	private List<SaleProduct> products;
 

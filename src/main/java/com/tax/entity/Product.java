@@ -23,7 +23,7 @@ import lombok.NoArgsConstructor;
 public class Product {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
 	@NotNull(message = "Name cant be null")

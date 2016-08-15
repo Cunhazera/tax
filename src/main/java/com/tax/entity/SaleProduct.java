@@ -1,6 +1,5 @@
 package com.tax.entity;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -24,7 +23,7 @@ import lombok.NoArgsConstructor;
 public class SaleProduct {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
 	private int quantity;
@@ -32,8 +31,5 @@ public class SaleProduct {
 	@NotNull(message = "Insert the product, please")
 	@ManyToOne(fetch = FetchType.EAGER)
 	private Product product;
-
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private Sale sale;
 
 }
