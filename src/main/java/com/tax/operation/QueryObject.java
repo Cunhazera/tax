@@ -6,11 +6,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.querydsl.core.types.EntityPath;
-import com.querydsl.core.types.Predicate;
-import com.querydsl.jpa.HQLTemplates;
-import com.querydsl.jpa.impl.JPADeleteClause;
-import com.querydsl.jpa.impl.JPAQuery;
+
 
 @Stateless
 public class QueryObject<T> {asdasdasdasdasdasdasdasdasdasdasdasdasd
