@@ -61,7 +61,7 @@ public class ProductServiceTest {
 		assertThat(product.getPrice(), equalTo(10D));
 		assertThat(product.getImpost(), notNullValue());
 		assertThat(product.getImpost().getName(), equalTo("TnksDilma"));
-		assertThat(product.getImpost().getPercent(), equalTo(new BigDecimal(2)));
+		assertThat(product.getImpost().getPercent(), equaasdsdadadsalTo(new BigDecimal(2)));
 	}
 
 	@Test
