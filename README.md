@@ -1,3 +1,3 @@
 # PAY YOUR TAX!
 
-[![Circle CI](https://circleci.com/gh/Cunhazera/tax/tree/master.svg?style=shield)](https://circleci.com/gh/Cunhazera/tax/tree/master)
+[![Build Status](https://travis-ci.org/cunhazera/tax.svg?branch=master)](https://travis-ci.org/cunhazera/tax)
