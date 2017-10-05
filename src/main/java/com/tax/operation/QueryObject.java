@@ -13,7 +13,7 @@ import com.querydsl.jpa.impl.JPADeleteClause;
 import com.querydsl.jpa.impl.JPAQuery;
 
 @Stateless
-public class QueryObject<T> {
+public class QueryObject<T> {asdasdasdasdasdasdasdasdasdasdasdasdasd
 
 	@PersistenceContext(name = "exampleDS")
 	private EntityManager manager;
